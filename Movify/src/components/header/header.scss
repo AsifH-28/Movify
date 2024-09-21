@@ -1,0 +1,13 @@
+@import '../../globalstyle/globalstyle.scss';
+.custom-menu {
+    .ant-menu-item-selected {
+      background-color: transparent !important; 
+      color:$secondaryColor !important; 
+      border-bottom: 2px solid $secondaryColor; 
+    }
+  
+    .ant-menu-item:hover {
+      color: $secondaryColor !important;
+    }
+  }
+  
