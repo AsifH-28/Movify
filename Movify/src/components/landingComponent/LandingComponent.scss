@@ -1,0 +1,23 @@
+@import '../../globalstyle//globalstyle.scss';
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slogan {
+    color: $secondaryColor;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif; 
+    text-align: center;
+    padding: 20px;
+  }
+  .button {
+    color: $primaryColor;
+    background-color: $secondaryColor;
+
+    &:hover{
+      background-color: $secondaryColor;
+    }
+  }
+  

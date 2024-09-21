@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
-import './header.scss'; // Importing SCSS file
+import './header.scss';
 
 const { Header } = Layout;
 
@@ -13,8 +13,8 @@ const HeaderComponent: React.FC = () => {
   ];
 
   return (
-    <Header style={{ backgroundColor: '#1f1f1f', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <div className="logo" style={{ color: 'white', fontSize: '20px' }}>Movify</div>
+    <Header style={{ backgroundColor: '#1f1f1f', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop:'20px' }}>
+      <div className="logo" style={{ color: 'white', fontSize: '20px',fontFamily:'Poppins'}}>Movify</div>
       <Menu
         theme="dark"
         mode="horizontal"
@@ -33,3 +33,5 @@ const HeaderComponent: React.FC = () => {
 };
 
 export default HeaderComponent;
+
+

@@ -1,4 +1,7 @@
 @import '../../globalstyle/globalstyle.scss';
+.header{
+    background-color: $secondaryColor;
+}
 .custom-menu {
     .ant-menu-item-selected {
       background-color: transparent !important; 
