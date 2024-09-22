@@ -1,0 +1,41 @@
+// searchBar.scss
+
+.search-bar {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+  
+    .ant-input-search {
+      border-radius: 30px;
+      overflow: hidden;
+  
+      input {
+        height: 48px;  // Set the height of the input
+        border-radius: 30px 0 0 30px;
+        padding: 0 20px;
+        font-size: 16px;
+        border: none;
+        
+        &:focus {
+          box-shadow: none;
+          border-color: #1890ff;
+        }
+      }
+  
+      button {
+        height: 48px;  // Set the same height for the button
+        border-radius: 0 30px 30px 0;
+        background-color: #1890ff;
+        color: white;
+        font-size: 16px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;  // Vertically center text within the button
+        
+        &:hover {
+          background-color: #40a9ff;
+        }
+      }
+    }
+  }
+  

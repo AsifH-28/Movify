@@ -1,14 +1,18 @@
-import { Button, ConfigProvider } from "antd";
+import { Button } from "antd";
 import "./LandingComponent.scss";
-import { Colors } from "../../utils/colors/colors";
-Colors;
+import { useNavigate } from "react-router-dom";
+
 const LandingComponent = () => {
+  const navigate = useNavigate();
   return (
     <div className="landing-container">
       <h1 className="slogan">Uncover Hidden Gems and Classic Favorites!</h1>
-      
-      <Button type="primary"  className="button">Get Started</Button>
-   
+
+      <Button type="primary" className="button" onClick={()=>{
+        navigate("search");
+      }}>
+        Get Started
+      </Button>
     </div>
   );
 };

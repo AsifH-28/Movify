@@ -8,7 +8,7 @@ const { Header } = Layout;
 const HeaderComponent: React.FC = () => {
   const menuItems = [
     { label: <Link to="/">Home</Link>, key: 'home' },
-    { label: <Link to="/search">Search</Link>, key: 'search' },
+    { label: <Link to="search">Search</Link>, key: 'search' },
     { label: <Link to="/about">About</Link>, key: 'about' },
   ];
 
