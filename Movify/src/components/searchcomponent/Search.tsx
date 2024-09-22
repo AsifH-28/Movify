@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Input, message } from 'antd';
-import './Search.scss';
+import React from "react";
+import { Input } from "antd";
+import "./Search.scss";
 
 const { Search } = Input;
 
@@ -9,10 +9,10 @@ interface SearchBarProps {
   onSearch: (searchTerm: string) => void;
 }
 
-
-const SearchBar: React.FC<SearchBarProps> = ({ placeholder = 'Search...' ,onSearch}) => {
-  
-
+const SearchBar: React.FC<SearchBarProps> = ({
+  placeholder = "Search...",
+  onSearch,
+}) => {
   return (
     <div className="search-bar">
       <Search

@@ -4,9 +4,14 @@ import LandingComponent from "../landingComponent/LandingComponent";
 import SearchBar from "../searchcomponent/Search";
 import { useState } from "react";
 import { message } from "antd";
+import { useGetMoviesQuery } from "../../services/api";
 
 export default function Layout() {
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const {data, isError,isLoading,isSuccess} = useGetMoviesQuery(searchTerm, {
+    skip: !searchTerm,
+  });
+
   const onSearch = (value: string) => {
     if (!value.trim()) {
       message.error("Please enter a search term!");
@@ -15,7 +20,7 @@ export default function Layout() {
       setSearchTerm(value);
     }
   };
-  console.log(searchTerm);
+  console.log("data from api",data);
   return (
     <>
       <HeaderComponent />
