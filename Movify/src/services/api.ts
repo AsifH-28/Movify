@@ -1,14 +1,15 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import MovieResponse from "../interface/TrendingMovie";
 
 export const apiSlice = createApi({
     reducerPath: "api",
-    baseQuery: fetchBaseQuery({ baseUrl: "https://www.omdbapi.com/" }),
+    baseQuery: fetchBaseQuery({ baseUrl: "https://api.themoviedb.org/" }),
     endpoints:(builder)=>({
-        getMovies:builder.query({
-            query: (searchTerm) => `?s=${searchTerm}&apikey=9c90dc3e`,
+        getTrndingMovies:builder.query<MovieResponse,void>({
+            query: () => `3/trending/movie/week?api_key=79fd810b57f9f9f16635a4edd80a731a`,
             
         })
     })
 })
 
-export const {useGetMoviesQuery} = apiSlice;
+export const {useGetTrndingMoviesQuery} = apiSlice;
